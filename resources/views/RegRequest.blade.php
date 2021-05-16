@@ -24,6 +24,7 @@
                                 <tr>
                                     <td>Name</td>
                                     <td>Email</td>
+                                    <td>Role</td>
                                     <td>Status</td>
                                     <td>Action</td>
                                 </tr>
@@ -33,6 +34,7 @@
                                     <tr>
                                         <th>{{ $user->name }}</th>
                                         <th>{{ $user->email }}</th>
+                                        <th>@if($user->is_admin == 0) User @else Admin @endif</th>
                                         <th>@if($user->status == 0) Inactive @else Active @endif</th>
                                         <th><a href="{{route('status', ['id'=>$user->id]) }}">
                                                 @if($user->status == 0)
