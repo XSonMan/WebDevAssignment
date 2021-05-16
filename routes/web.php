@@ -24,3 +24,7 @@ Route::resource('events','App\Http\Controllers\EventController');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('admin\home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+Route::get('/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
+
+Route::get('status/{id}', [App\Http\Controllers\HomeController::class, 'status'])->name('status');
