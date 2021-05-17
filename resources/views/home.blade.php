@@ -13,8 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                        <div>
+                            <a style="font-size:40px;color: black;font-family: 'Bold Italic Art';">USER HOMEPAGE</a>
+                        </div>
+                        <div>
+                            <a>Event List (Incomplete)</a>
+                        </div>
+                        <div>
+                            <a>Payment (Incomplete)</a>
+                        </div>
                 </div>
             </div>
         </div>
