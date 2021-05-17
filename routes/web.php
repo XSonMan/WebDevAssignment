@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +21,35 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('events','App\Http\Controllers\EventController');
+Route::resource('list','App\Http\Controllers\EventListController');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*Route::get('/test', function(Request $request){
+    $user = $request->user();
+    dd($user->hasRole('admin'));
+    dd($user->givePermissionsto('manage-event'));
+    dd($user->can('manage-event'));
 
-Route::get('admin\home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+});*/
 
-Route::get('/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
+Route::group(['middleware' => 'role:admin'], function() {
+
+    Route::get('/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
+    Route::get('status/{id}', [App\Http\Controllers\HomeController::class, 'status'])->name('status');
+
+    Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home');
+
+    Route::resource('events','App\Http\Controllers\EventController');
+
+});
+
+Route::group(['middleware' => 'role:user'], function() {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+});
+
+
+
+
 
 Route::get('/list', [App\Http\Controllers\HomeController::class, 'eventList'])->name('list');
 
-Route::get('status/{id}', [App\Http\Controllers\HomeController::class, 'status'])->name('status');

@@ -38,7 +38,7 @@ class HomeController extends Controller
 
     public function eventList(){
         $events = Event::all();
-        return view('list', compact('events'));
+        return view('lists/list', compact('events'));
     }
 
     public function RegRequest(){
