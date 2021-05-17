@@ -27,4 +27,6 @@ Route::get('admin\home', [App\Http\Controllers\HomeController::class, 'adminHome
 
 Route::get('/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
 
+Route::get('/list', [App\Http\Controllers\HomeController::class, 'eventList'])->name('list');
+
 Route::get('status/{id}', [App\Http\Controllers\HomeController::class, 'status'])->name('status');

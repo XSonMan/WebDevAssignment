@@ -14,7 +14,7 @@
                         </ul>
                     </div><br />
                 @endif
-                <form method="post" action="{{ route('events.store') }}">
+                <form role="form" method="post" action="{{ route('events.store') }}">
                     @csrf
                     <div class="form-group">
                         <label for="event_name">Event Name:</label>
@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <label for="event_image">Event Image(not done):</label>
                         <!--<input type="text" class="form-control" name="event_image"/>-->
-                        <input type="file" class="form-control-file" name="event_image" id="event_image" aria-describedby="fileHelp">
+                        <input type="file" class="form-control-file" {{ (!empty($events->event_image)) ? "disabled" : ''}} name="event_image" id="event_image" aria-describedby="fileHelp">
                     </div>
 
                     <div class="form-group">

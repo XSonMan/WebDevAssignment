@@ -15,5 +15,7 @@ class Event extends Model
         'event_date'
     ];
 
+    protected $guarded = [];
+
     use HasFactory;
 }

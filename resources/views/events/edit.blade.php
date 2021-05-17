@@ -35,7 +35,7 @@
 
                 <div class="form-group">
                     <label for="event_image">Image:</label>
-                    <input type="text" class="form-control" name="event_image" value={{ $event->event_image }} />
+                    <input type="file" class="form-control-file" name="event_image" id="event_image" aria-describedby="fileHelp" value={{ $event->event_image }} />
                 </div>
 
                 <div class="form-group">

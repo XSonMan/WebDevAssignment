@@ -17,7 +17,7 @@
                             <a style="font-size:40px;color: black;font-family: 'Bold Italic Art';">USER HOMEPAGE</a>
                         </div>
                         <div>
-                            <a>Event List (Incomplete)</a>
+                            <a href="/list">Event List </a>
                         </div>
                         <div>
                             <a>Payment (Incomplete)</a>

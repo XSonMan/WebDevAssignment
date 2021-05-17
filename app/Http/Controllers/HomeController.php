@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,6 +34,11 @@ class HomeController extends Controller
 
     public function adminHome(){
         return view('adminHome');
+    }
+
+    public function eventList(){
+        $events = Event::all();
+        return view('list', compact('events'));
     }
 
     public function RegRequest(){

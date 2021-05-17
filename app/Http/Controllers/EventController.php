@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -37,6 +39,29 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+        /*$register = $request->session()->get('events');
+
+        if(!isset($register->productImg)) {
+            $request->validate([
+                'event_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12048',
+            ]);
+            $fileName = "productImage-" . time() . '.' . request()->productimg->getClientOriginalExtension();
+            $request->productimg->storeAs('productimg', $fileName);
+            $register = $request->session()->get('events');
+            $register->productImg = $fileName;
+            $request->session()->put('events', $register);
+        }*/
+        /*if ($request->hasFile('event_image')){
+            $image = $request->file('event_image');
+            $fileName   = time() . '.' . $image->getClientOriginalExtension();
+            $img = Image::make($image->getRealPath());
+            $img->resize(120, 120, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $img->stream();
+            Storage::disk('local')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
+        }*/
+
         $request->validate([
             'event_name'=>'required',
             'event_location'=>'required',
