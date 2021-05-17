@@ -18,6 +18,7 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                            <a style="margin: 19px;" href="{{ route('admin.home')}}" class="btn btn-primary">Home</a>
 
                         <table class="table">
                             <thead>

@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('Logged in as Admin') }}
+                        <a href="/regrequest">Register Requests</a>
+                        <a href="/events">Event Management</a>
                 </div>
             </div>
         </div>
