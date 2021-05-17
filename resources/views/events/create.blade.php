@@ -22,15 +22,26 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="event_location">Event Location:</label>
+                        <input type="text" class="form-control" name="event_location"/>
+                    </div>
+
+                    <div class="form-group">
                         <label for="event_description">Event Description:</label>
                         <input type="text" class="form-control" name="event_description"/>
                     </div>
 
                     <div class="form-group">
-                        <label for="participants">Participants:</label>
-                        <input type="text" class="form-control" name="participants"/>
+                        <label for="event_image">Event Image(not done):</label>
+                        <!--<input type="text" class="form-control" name="event_image"/>-->
+                        <input type="file" class="form-control-file" name="event_image" id="event_image" aria-describedby="fileHelp">
                     </div>
-                    <button type="submit" class="btn btn-primary-outline">Add contact</button>
+
+                    <div class="form-group">
+                        <label for="event_date">Event Date(not done):</label>
+                        <input type="date" class="form-control"  name="event_date"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary-outline">Add Event</button>
                 </form>
             </div>
         </div>

@@ -80,7 +80,7 @@ class LoginController extends Controller
             }
         }
         else{
-            $errors = [$this->username()=> 'Account is not activated. Contact an Admin to activate account.'];
+            $errors = [$this->username()=> 'Wrong Credentials / Account not activated by Admin.'];
 
             if($request->expectsJson()){
                 return Response()->json($errors,422);

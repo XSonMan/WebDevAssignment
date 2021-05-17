@@ -39,14 +39,18 @@ class EventController extends Controller
     {
         $request->validate([
             'event_name'=>'required',
+            'event_location'=>'required',
             'event_description'=>'required',
-            'participants'=>'required'
+            'event_image'=>'required',
+            'event_date'=>'required'
         ]);
 
         $event = new Event([
             'event_name' => $request->get('event_name'),
+            'event_location' => $request->get('event_location'),
             'event_description' => $request->get('event_description'),
-            'participants' => $request->get('participants')
+            'event_image' => $request->get('event_image'),
+            'event_date' => $request->get('event_date')
         ]);
         $event->save();
         return redirect('/events')->with('success', 'Event Created');
@@ -87,14 +91,18 @@ class EventController extends Controller
     {
         $request->validate([
             'event_name'=>'required',
+            'event_location'=>'required',
             'event_description'=>'required',
-            'participants'=>'required'
+            'event_image'=>'required',
+            'event_date'=>'required'
         ]);
 
         $event = Event::find($id);
         $event->event_name =  $request->get('event_name');
+        $event->event_location = $request->get('event_location');
         $event->event_description = $request->get('event_description');
-        $event->participants = $request->get('participants');
+        $event->event_image = $request->get('event_image');
+        $event->event_date = $request->get('event_date');
         $event->save();
 
         return redirect('/events')->with('success', 'Event updated!');
@@ -107,7 +115,7 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event, $id)
+    public function destroy($id)
     {
         $event = Event::find($id);
         $event->delete();

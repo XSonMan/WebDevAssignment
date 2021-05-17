@@ -21,8 +21,10 @@
                 <thead>
                 <tr>
                     <td>Event Name</td>
+                    <td>Event Location</td>
                     <td>Event Description</td>
-                    <td>Participants</td>
+                    <td>Image</td>
+                    <td>Event Date</td>
                     <td colspan = 2>Actions</td>
                 </tr>
                 </thead>
@@ -30,8 +32,10 @@
                 @foreach($events as $event)
                     <tr>
                         <td>{{$event->event_name}}</td>
+                        <td>{{$event->event_location}}</td>
                         <td>{{$event->event_description}}</td>
-                        <td>{{$event->participants}}</td>
+                        <td>{{$event->event_image}}</td>
+                        <td>{{$event->event_date}}</td>
                         <td>
                             <a href="{{ route('events.edit',$event->id)}}" class="btn btn-primary">Edit</a>
                         </td>

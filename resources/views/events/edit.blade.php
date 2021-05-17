@@ -24,13 +24,23 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="event_location">Event Location:</label>
+                    <input type="text" class="form-control" name="event_location" value={{ $event->event_location }} />
+                </div>
+
+                <div class="form-group">
                     <label for="event_description">Event Description:</label>
                     <input type="text" class="form-control" name="event_description" value={{ $event->event_description }} />
                 </div>
 
                 <div class="form-group">
-                    <label for="participants">Participants:</label>
-                    <input type="text" class="form-control" name="participants" value={{ $event->participants }} />
+                    <label for="event_image">Image:</label>
+                    <input type="text" class="form-control" name="event_image" value={{ $event->event_image }} />
+                </div>
+
+                <div class="form-group">
+                    <label for="event_date">Event Date:</label>
+                    <input type="date" class="form-control"  name="event_date" value={{ $event->event_date }} />
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
