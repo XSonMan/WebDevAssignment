@@ -47,9 +47,7 @@ Route::group(['middleware' => 'role:user'], function() {
 
 });
 
-
-
-
-
 Route::get('/list', [App\Http\Controllers\HomeController::class, 'eventList'])->name('list');
+
+//Route::get('/roles', [App\Http\Controllers\PermissionController::class, 'Permission']);
 

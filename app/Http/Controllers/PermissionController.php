@@ -15,37 +15,37 @@ class PermissionController extends Controller
         $manager_permission = Permission::where('slug', 'payment')->first();
 
         //RoleTableSeeder.php
-        $dev_role = new Role();
-        $dev_role->slug = 'admin';
-        $dev_role->name = 'Admin';
-        $dev_role->save();
-        $dev_role->permissions()->attach($dev_permission);
+        $admin_role = new Role();
+        $admin_role->slug = 'admin';
+        $admin_role->name = 'Admin';
+        $admin_role->save();
+        $admin_role->permissions()->attach($dev_permission);
 
-        $manager_role = new Role();
-        $manager_role->slug = 'user';
-        $manager_role->name = 'User';
-        $manager_role->save();
-        $manager_role->permissions()->attach($manager_permission);
+        $user_role = new Role();
+        $user_role->slug = 'user';
+        $user_role->name = 'User';
+        $user_role->save();
+        $user_role->permissions()->attach($manager_permission);
 
-        $dev_role = Role::where('slug','admin')->first();
-        $manager_role = Role::where('slug', 'user')->first();
+        $admin_role = Role::where('slug','admin')->first();
+        $user_role = Role::where('slug', 'user')->first();
 
-        $createTasks = new Permission();
-        $createTasks->slug = 'manage-event';
-        $createTasks->name = 'Manage Event';
-        $createTasks->save();
-        $createTasks->roles()->attach($dev_role);
+        $adminPermission1 = new Permission();
+        $adminPermission1->slug = 'manage-event';
+        $adminPermission1->name = 'Manage Event';
+        $adminPermission1->save();
+        $adminPermission1->roles()->attach($admin_role);
 
-        $editUsers = new Permission();
-        $editUsers->slug = 'payment';
-        $editUsers->name = 'Payment';
-        $editUsers->save();
-        $editUsers->roles()->attach($manager_role);
+        $userPermission1 = new Permission();
+        $userPermission1->slug = 'payment';
+        $userPermission1->name = 'Payment';
+        $userPermission1->save();
+        $userPermission1->roles()->attach($user_role);
 
-        $dev_role = Role::where('slug','admin')->first();
-        $manager_role = Role::where('slug', 'user')->first();
-        $dev_perm = Permission::where('slug','manage-event')->first();
-        $manager_perm = Permission::where('slug','payment')->first();
+        $admin_role = Role::where('slug','admin')->first();
+        $user_role = Role::where('slug', 'user')->first();
+        $admin_perm1= Permission::where('slug','manage-event')->first();
+        $user_perm1= Permission::where('slug','payment')->first();
 
         $developer = new User();
         $developer->name = 'Admin1';
@@ -54,8 +54,8 @@ class PermissionController extends Controller
         $developer->is_admin = '1';
         $developer->status = '1';
         $developer->save();
-        $developer->roles()->attach($dev_role);
-        $developer->permissions()->attach($dev_perm);
+        $developer->roles()->attach($admin_role);
+        $developer->permissions()->attach($admin_perm1);
 
         $developer = new User();
         $developer->name = 'Admin2';
@@ -64,8 +64,8 @@ class PermissionController extends Controller
         $developer->is_admin = '1';
         $developer->status = '1';
         $developer->save();
-        $developer->roles()->attach($dev_role);
-        $developer->permissions()->attach($dev_perm);
+        $developer->roles()->attach($admin_role);
+        $developer->permissions()->attach($admin_perm1);
 
         $manager = new User();
         $manager->name = 'User1';
@@ -74,8 +74,8 @@ class PermissionController extends Controller
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();
-        $manager->roles()->attach($manager_role);
-        $manager->permissions()->attach($manager_perm);
+        $manager->roles()->attach($user_role);
+        $manager->permissions()->attach($user_perm1);
 
         $manager = new User();
         $manager->name = 'User2';
@@ -84,8 +84,8 @@ class PermissionController extends Controller
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();
-        $manager->roles()->attach($manager_role);
-        $manager->permissions()->attach($manager_perm);
+        $manager->roles()->attach($user_role);
+        $manager->permissions()->attach($user_perm1);
 
         $manager = new User();
         $manager->name = 'User3';
@@ -94,8 +94,8 @@ class PermissionController extends Controller
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();
-        $manager->roles()->attach($manager_role);
-        $manager->permissions()->attach($manager_perm);
+        $manager->roles()->attach($user_role);
+        $manager->permissions()->attach($user_perm1);
 
 
         return redirect()->back();
