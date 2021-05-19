@@ -24,7 +24,7 @@
                     <td>Event Location</td>
                     <td>Event Description</td>
                     <td>Image</td>
-                    <td>Event Date</td>
+                    <td colspan = 2>Event Date</td>
                     <td colspan = 2>Actions</td>
                 </tr>
                 </thead>
@@ -38,6 +38,9 @@
                         <td><?php echo e($event->event_date); ?></td>
                         <td>
                             <a href="<?php echo e(route('events.edit',$event->id)); ?>" class="btn btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <a href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Event</a>
                         </td>
                         <td>
                             <form action="<?php echo e(route('events.destroy', $event->id)); ?>" method="post">

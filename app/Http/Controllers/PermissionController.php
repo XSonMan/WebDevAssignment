@@ -50,7 +50,7 @@ class PermissionController extends Controller
         $developer = new User();
         $developer->name = 'Admin1';
         $developer->email = 'Son@admin.com';
-        $developer->password = bcrypt('123456');
+        $developer->password = bcrypt('123');
         $developer->is_admin = '1';
         $developer->status = '1';
         $developer->save();
@@ -60,7 +60,7 @@ class PermissionController extends Controller
         $developer = new User();
         $developer->name = 'Admin2';
         $developer->email = 'Gus@admin.com';
-        $developer->password = bcrypt('123456');
+        $developer->password = bcrypt('123');
         $developer->is_admin = '1';
         $developer->status = '1';
         $developer->save();
@@ -70,7 +70,7 @@ class PermissionController extends Controller
         $manager = new User();
         $manager->name = 'User1';
         $manager->email = 'Son@user.com';
-        $manager->password = bcrypt('123456');
+        $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();
@@ -80,7 +80,7 @@ class PermissionController extends Controller
         $manager = new User();
         $manager->name = 'User2';
         $manager->email = 'test@user.com';
-        $manager->password = bcrypt('123456');
+        $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();
@@ -90,7 +90,7 @@ class PermissionController extends Controller
         $manager = new User();
         $manager->name = 'User3';
         $manager->email = 'cuba@user.com';
-        $manager->password = bcrypt('123456');
+        $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';
         $manager->save();

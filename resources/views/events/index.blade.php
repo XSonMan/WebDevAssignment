@@ -26,7 +26,7 @@
                     <td>Event Location</td>
                     <td>Event Description</td>
                     <td>Image</td>
-                    <td>Event Date</td>
+                    <td colspan = 2>Event Date</td>
                     <td colspan = 2>Actions</td>
                 </tr>
                 </thead>
@@ -40,6 +40,9 @@
                         <td>{{$event->event_date}}</td>
                         <td>
                             <a href="{{ route('events.edit',$event->id)}}" class="btn btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('list.show', $event->id)}}" class="btn btn-primary">View Event</a>
                         </td>
                         <td>
                             <form action="{{ route('events.destroy', $event->id)}}" method="post">

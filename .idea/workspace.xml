@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Missing files not added during First Commit" />
+    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Missing files not added during First Commit">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ParticipateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Participate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_19_171817_create_participates_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/lists/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lists/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/2kGmPVKAYVY7H4A2fODYxEzrh0jtxptBALDWS9zs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/HeTmbAOzw07Mn0VRUcFM30GGqs9vRrQrU2RCOaDd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/mPnOdijHwdudGTFyb9p6krj2WrJdITaJPSORQJWY" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +197,8 @@
       <workItem from="1621027229139" duration="8202000" />
       <workItem from="1621122060304" duration="15995000" />
       <workItem from="1621199921272" duration="32970000" />
-      <workItem from="1621348917703" duration="10531000" />
+      <workItem from="1621348917703" duration="11216000" />
+      <workItem from="1621368622200" duration="11988000" />
     </task>
     <task id="LOCAL-00001" summary="Missing files not added during First Commit">
       <created>1621367535376</created>
@@ -186,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621367535376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Missing files not added during First Commit">
+      <created>1621367807654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621367807654</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

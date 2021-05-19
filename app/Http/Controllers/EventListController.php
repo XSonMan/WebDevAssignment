@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EventList;
+use App\Models\Event;
+//use App\Models\Participate;
+use App\Models\Participate;
 use Illuminate\Http\Request;
 
 class EventListController extends Controller
@@ -35,7 +37,20 @@ class EventListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $participate = new Participate([
+            'user_id' => $request->get('user_id'),
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'event_id' => $request->get('event_id')
+        ]);
+        $participants = Participate::select('user_id','event_id')->where('user_id','=',$participate->user_id)->where('event_id', '=', $participate->event_id)->get();
+        if($participants != "[]"){
+            return redirect('/list')->with('success', "You have already registered for this event");
+        }
+        else{
+            $participate->save();
+            return redirect('/list')->with('success', 'Successfully registered');
+        }
     }
 
     /**
@@ -44,9 +59,11 @@ class EventListController extends Controller
      * @param  \App\Models\EventList  $eventList
      * @return \Illuminate\Http\Response
      */
-    public function show(EventList $eventList)
+    public function show($id)
     {
-        //
+        $event = Event::find($id);
+        $participants = Participate::select('email')->where('event_id',$id)->get();
+        return view('lists.view', compact('event','participants'));
     }
 
     /**

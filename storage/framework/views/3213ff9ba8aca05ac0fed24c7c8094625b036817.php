@@ -31,7 +31,15 @@
                 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
                         <td>
-                            <a class="btn btn-primary">View Event</a>
+                            <!--<a href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Event</a>-->
+                                <form method="post" action="<?php echo e(route('list.store', $event->id)); ?>">
+                                    <?php echo csrf_field(); ?>
+                                    <input type="hidden" class="form-control" name="user_id" value=<?php echo e(Auth::user()->id); ?> />
+                                    <input type="hidden" class="form-control" name="name" value=<?php echo e(Auth::user()->name); ?> />
+                                    <input type="hidden" class="form-control" name="email" value=<?php echo e(Auth::user()->email); ?> />
+                                    <input type="hidden" class="form-control" name="event_id" value=<?php echo e($event->id); ?> />
+                                    <button class="btn btn-primary" >Participate</button>
+                                </form>
                         </td>
                         <td><?php echo e($event->event_name); ?></td>
                         <td><?php echo e($event->event_location); ?></td>
