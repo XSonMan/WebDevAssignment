@@ -12,6 +12,7 @@
                         </ul>
                     </div><br />
                 <?php endif; ?>
+                <a style="margin: 19px;" href="<?php echo e(route('events.index')); ?>" class="btn btn-primary">Home</a>
                 <form role="form" method="post" action="<?php echo e(route('events.store')); ?>">
                     <?php echo csrf_field(); ?>
                     <div class="form-group">

@@ -20,7 +20,7 @@
                             <a href="/list">Event List </a>
                         </div>
                         <div>
-                            <a>Payment (Incomplete)</a>
+                            <a href="donate">Donate to an event </a>
                         </div>
                 </div>
             </div>

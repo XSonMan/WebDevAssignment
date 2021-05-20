@@ -42,7 +42,7 @@
                             <a href="{{ route('events.edit',$event->id)}}" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
-                            <a href="{{ route('list.show', $event->id)}}" class="btn btn-primary">View Event</a>
+                            <a href="{{ route('list.show', $event->id)}}" class="btn btn-primary">View Participants</a>
                         </td>
                         <td>
                             <form action="{{ route('events.destroy', $event->id)}}" method="post">

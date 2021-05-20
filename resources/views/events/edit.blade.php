@@ -14,6 +14,7 @@
                 </div>
                 <br />
             @endif
+            <a style="margin: 19px;" href="{{ route('events.index')}}" class="btn btn-primary">Home</a>
             <form method="post" action="{{ route('events.update', $event->id) }}">
                 @method('PATCH')
                 @csrf

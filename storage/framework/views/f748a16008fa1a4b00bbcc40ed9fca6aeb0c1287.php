@@ -15,11 +15,14 @@
                     <div>
                         <a style="font-size:40px;color: black;font-family: 'Bold Italic Art';"><?php echo e(Auth::user()->name); ?> HOMEPAGE</a>
                     </div>
-                        <div>
-                            <a href="/regrequest">Register Requests</a>
-                        </div>
                     <div>
-                        <a href="/events">Event Management</a>
+                        <a href="regrequest">Register Requests</a>
+                    </div>
+                    <div>
+                        <a href="events">Event Management</a>
+                    </div>
+                    <div>
+                        <a href="donatelist">Donate List(all)</a>
                     </div>
 
                 </div>

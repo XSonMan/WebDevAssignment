@@ -15,7 +15,7 @@
                 <br />
             @endif
             <div>
-                <a style="margin: 19px;" href="/events" class="btn btn-primary">Home</a>
+                <a style="margin: 19px;" href="{{ route('events.index')}}" class="btn btn-primary">Home</a>
             </div>
             <div class="form-group">
 

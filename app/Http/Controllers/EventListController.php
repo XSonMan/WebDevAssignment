@@ -45,7 +45,7 @@ class EventListController extends Controller
         ]);
         $participants = Participate::select('user_id','event_id')->where('user_id','=',$participate->user_id)->where('event_id', '=', $participate->event_id)->get();
         if($participants != "[]"){
-            return redirect('/list')->with('success', "You have already registered for this event");
+            return redirect('/list')->with('success', "You are already registered to this event");
         }
         else{
             $participate->save();

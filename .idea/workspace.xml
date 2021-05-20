@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Missing files not added during First Commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ParticipateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Participate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_19_171817_create_participates_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lists/view.blade.php" afterDir="false" />
+    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Prevent duplicate entry">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DonationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Donation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Donlist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_19_203009_create_donations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/adminDList.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/donate/donate.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/donate/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PermissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminHome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lists/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lists/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/2kGmPVKAYVY7H4A2fODYxEzrh0jtxptBALDWS9zs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/HeTmbAOzw07Mn0VRUcFM30GGqs9vRrQrU2RCOaDd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/mPnOdijHwdudGTFyb9p6krj2WrJdITaJPSORQJWY" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/690caee33b6bc7bc539950f6c27f7708091e31f5.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/690caee33b6bc7bc539950f6c27f7708091e31f5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6c05663b4902d4a1c9e3f8f66c782b2480b250a3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6c05663b4902d4a1c9e3f8f66c782b2480b250a3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f748a16008fa1a4b00bbcc40ed9fca6aeb0c1287.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f748a16008fa1a4b00bbcc40ed9fca6aeb0c1287.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/fa5ea67da384a48eb0be5fbab6bd9d5a57d9abfe.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/fa5ea67da384a48eb0be5fbab6bd9d5a57d9abfe.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
@@ -32,6 +41,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -174,6 +189,7 @@
       <recent name="C:\Users\XSonM\gitapps\laravel\GProject\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XSonM\gitapps\laravel\GProject\resources\views\donate" />
       <recent name="C:\Users\XSonM\gitapps\laravel\GProject\app\Providers" />
       <recent name="C:\Users\XSonM\gitapps\laravel\GProject\resources\views\lists" />
       <recent name="C:\Users\XSonM\gitapps\laravel\GProject\resources\views" />
@@ -198,7 +214,7 @@
       <workItem from="1621122060304" duration="15995000" />
       <workItem from="1621199921272" duration="32970000" />
       <workItem from="1621348917703" duration="11216000" />
-      <workItem from="1621368622200" duration="11988000" />
+      <workItem from="1621368622200" duration="25872000" />
     </task>
     <task id="LOCAL-00001" summary="Missing files not added during First Commit">
       <created>1621367535376</created>
@@ -214,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621367807654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Prevent duplicate entry">
+      <created>1621455137698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621455137698</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +258,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Missing files not added during First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missing files not added during First Commit" />
+    <MESSAGE value="Prevent duplicate entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prevent duplicate entry" />
   </component>
 </project>

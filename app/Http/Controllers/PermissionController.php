@@ -48,8 +48,8 @@ class PermissionController extends Controller
         $user_perm1= Permission::where('slug','payment')->first();
 
         $developer = new User();
-        $developer->name = 'Admin1';
-        $developer->email = 'Son@admin.com';
+        $developer->name = 'Son';
+        $developer->email = 'Son@admin';
         $developer->password = bcrypt('123');
         $developer->is_admin = '1';
         $developer->status = '1';
@@ -58,8 +58,8 @@ class PermissionController extends Controller
         $developer->permissions()->attach($admin_perm1);
 
         $developer = new User();
-        $developer->name = 'Admin2';
-        $developer->email = 'Gus@admin.com';
+        $developer->name = 'Gus';
+        $developer->email = 'Gus@admin';
         $developer->password = bcrypt('123');
         $developer->is_admin = '1';
         $developer->status = '1';
@@ -68,8 +68,8 @@ class PermissionController extends Controller
         $developer->permissions()->attach($admin_perm1);
 
         $manager = new User();
-        $manager->name = 'User1';
-        $manager->email = 'Son@user.com';
+        $manager->name = 'XSon';
+        $manager->email = 'Son@use';
         $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';
@@ -78,8 +78,8 @@ class PermissionController extends Controller
         $manager->permissions()->attach($user_perm1);
 
         $manager = new User();
-        $manager->name = 'User2';
-        $manager->email = 'test@user.com';
+        $manager->name = 'test';
+        $manager->email = 'test@use';
         $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';
@@ -88,8 +88,8 @@ class PermissionController extends Controller
         $manager->permissions()->attach($user_perm1);
 
         $manager = new User();
-        $manager->name = 'User3';
-        $manager->email = 'cuba@user.com';
+        $manager->name = 'cuba';
+        $manager->email = 'cuba@use';
         $manager->password = bcrypt('123');
         $manager->is_admin = '0';
         $manager->status = '0';

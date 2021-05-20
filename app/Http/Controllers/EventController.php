@@ -7,6 +7,7 @@ use App\Models\Participate;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use DB;
 
 class EventController extends Controller
 {
@@ -67,19 +68,23 @@ class EventController extends Controller
             'event_name'=>'required',
             'event_location'=>'required',
             'event_description'=>'required',
+            //'event_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:6144',
             'event_image'=>'required',
             'event_date'=>'required'
         ]);
+
+        //$fileName = "eventpic-" . time() . '.' . request()->event_image->getClientOriginalExtension();
 
         $event = new Event([
             'event_name' => $request->get('event_name'),
             'event_location' => $request->get('event_location'),
             'event_description' => $request->get('event_description'),
-            'event_image' => $request->get('event_image'),
+            //'event_image' => $request->event_image->storeAs('event_image', $fileName),
+            'event_image' => $request->get('event_description'),
             'event_date' => $request->get('event_date')
         ]);
         $event->save();
-        return redirect('/events')->with('success', 'Event Created');
+        return redirect('admin/events')->with('success', 'Event Created');
 
     }
 
@@ -131,7 +136,7 @@ class EventController extends Controller
         $event->event_date = $request->get('event_date');
         $event->save();
 
-        return redirect('/events')->with('success', 'Event updated!');
+        return redirect('admin/events')->with('success', 'Event updated!');
 
     }
 
@@ -145,8 +150,10 @@ class EventController extends Controller
     {
         $event = Event::find($id);
         $event->delete();
+        $donate = DB::table('gproject.donations')->select('*')->where("gproject.donations.event_id",'=', $event->id)->delete();
+        //$donate->delete();
 
-        return redirect('/events')->with('success', 'Event Cancelled');
+        return redirect('admin/events')->with('success', "Events and related donations are deleted");
 
     }
 }

@@ -13,6 +13,7 @@
                 </div>
                 <br />
             <?php endif; ?>
+            <a style="margin: 19px;" href="<?php echo e(route('events.index')); ?>" class="btn btn-primary">Home</a>
             <form method="post" action="<?php echo e(route('events.update', $event->id)); ?>">
                 <?php echo method_field('PATCH'); ?>
                 <?php echo csrf_field(); ?>

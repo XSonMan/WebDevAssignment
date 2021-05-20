@@ -36,6 +36,17 @@ class HomeController extends Controller
         return view('adminHome');
     }
 
+    public function admindonatelist(){
+        $donates = DB::table('gproject.donations')->select('user_id','name','email','event_name','amount','proof','gproject.donations.created_at')
+            ->join('gproject.events','donations.event_id','=','events.id')->get();
+        return view('adminDList', compact('donates'));
+    }
+
+    public function donate(){
+        $events = Event::all();
+        return view('donate', compact('events'));
+    }
+
     public function eventList(){
         $events = Event::all();
         return view('lists/list', compact('events'));
@@ -58,6 +69,6 @@ class HomeController extends Controller
         }
         $data->save();
 
-        return Redirect::to('regrequest')->with('message', $data->name."'s account is ".$msg);
+        return Redirect::to('admin/regrequest')->with('message', $data->name."'s account is ".$msg);
     }
 }

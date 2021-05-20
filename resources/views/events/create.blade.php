@@ -14,6 +14,7 @@
                         </ul>
                     </div><br />
                 @endif
+                <a style="margin: 19px;" href="{{ route('events.index')}}" class="btn btn-primary">Home</a>
                 <form role="form" method="post" action="{{ route('events.store') }}">
                     @csrf
                     <div class="form-group">

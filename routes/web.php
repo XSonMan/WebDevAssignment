@@ -33,17 +33,19 @@ Route::resource('list','App\Http\Controllers\EventListController');
 
 Route::group(['middleware' => 'role:admin'], function() {
 
-    Route::get('/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
+    Route::get('admin/regrequest', [App\Http\Controllers\HomeController::class, 'RegRequest'])->name('regrequest');
     Route::get('status/{id}', [App\Http\Controllers\HomeController::class, 'status'])->name('status');
 
     Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('admin/donatelist', [App\Http\Controllers\HomeController::class, 'admindonatelist'])->name('admin.dlist');
 
-    Route::resource('events','App\Http\Controllers\EventController');
+    Route::resource('admin/events','App\Http\Controllers\EventController');
 
 });
 
 Route::group(['middleware' => 'role:user'], function() {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('user/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('user/donate','App\Http\Controllers\DonationController');
 
 });
 

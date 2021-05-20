@@ -40,7 +40,7 @@
                             <a href="<?php echo e(route('events.edit',$event->id)); ?>" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
-                            <a href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Event</a>
+                            <a href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Participants</a>
                         </td>
                         <td>
                             <form action="<?php echo e(route('events.destroy', $event->id)); ?>" method="post">
