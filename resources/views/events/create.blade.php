@@ -15,7 +15,7 @@
                     </div><br />
                 @endif
                 <a style="margin: 19px;" href="{{ route('events.index')}}" class="btn btn-primary">Home</a>
-                <form role="form" method="post" action="{{ route('events.store') }}">
+                <form role="form" enctype="multipart/form-data" method="post" action="{{ route('events.store') }}">
                     @csrf
                     <div class="form-group">
                         <label for="event_name">Event Name:</label>
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="event_date">Event Date(not done):</label>
+                        <label for="event_date">Event Date:</label>
                         <input type="date" class="form-control"  name="event_date"/>
                     </div>
                     <button type="submit" class="btn btn-primary-outline">Add Event</button>

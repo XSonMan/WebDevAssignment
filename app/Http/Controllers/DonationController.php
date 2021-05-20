@@ -57,17 +57,18 @@ class DonationController extends Controller
             'name'=>'required',
             'email'=>'required',
             'amount'=>'required',
-            'proof'=>'required',
+            'proof'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:6144',
             'event_id'=>'required'
         ]);
 
+        $fileName = "eventpic-" . time() . '.' . request()->proof->getClientOriginalExtension();
 
         $donate = new Donation([
             'user_id' => $request->get('user_id'),
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'amount' => $request->get('amount'),
-            'proof' => $request->get('proof'),
+            'proof' => $request->proof->storeAs('proof', $fileName),
             'event_id' => $request->get('event_id')
         ]);
         $donate->save();

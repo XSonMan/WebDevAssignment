@@ -14,7 +14,7 @@
                 <br />
             <?php endif; ?>
             <a style="margin: 19px;" href="<?php echo e(route('events.index')); ?>" class="btn btn-primary">Home</a>
-            <form method="post" action="<?php echo e(route('events.update', $event->id)); ?>">
+            <form method="post" enctype="multipart/form-data" action="<?php echo e(route('events.update', $event->id)); ?>">
                 <?php echo method_field('PATCH'); ?>
                 <?php echo csrf_field(); ?>
                 <div class="form-group">
@@ -34,7 +34,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="event_image">Image:</label>
+                    <label for="event_image">Current Event Image:</label>
+                </div>
+
+                <div class="form-group">
+                    <img height="200" width="200" src="<?php echo e(asset("/storage/$event->event_image")); ?>"/>
                     <input type="file" class="form-control-file" name="event_image" id="event_image" aria-describedby="fileHelp" value=<?php echo e($event->event_image); ?> />
                 </div>
 

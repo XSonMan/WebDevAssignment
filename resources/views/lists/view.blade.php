@@ -42,7 +42,7 @@
             <div class="form-group">
                 <label for="event_image">Image:</label>
                 <div>
-                    {{ $event->event_image }}
+                    <img height="200" width="200" src="{{ asset("/storage/$event->event_image") }}"/>
                 </div>
             </div>
 

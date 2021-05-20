@@ -46,7 +46,7 @@
                         <td>{{$event->event_name}}</td>
                         <td>{{$event->event_location}}</td>
                         <td>{{$event->event_description}}</td>
-                        <td>{{$event->event_image}}</td>
+                        <td><img height="200" width="200" src="{{ asset("/storage/$event->event_image") }}"/></td>
                         <td>{{$event->event_date}}</td>
                     </tr>
                 @endforeach

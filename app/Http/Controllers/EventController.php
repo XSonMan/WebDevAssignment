@@ -68,19 +68,19 @@ class EventController extends Controller
             'event_name'=>'required',
             'event_location'=>'required',
             'event_description'=>'required',
-            //'event_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:6144',
-            'event_image'=>'required',
+            'event_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:6144',
+            //'event_image'=>'required',
             'event_date'=>'required'
         ]);
 
-        //$fileName = "eventpic-" . time() . '.' . request()->event_image->getClientOriginalExtension();
+        $fileName = "eventpic-" . time() . '.' . request()->event_image->getClientOriginalExtension();
 
         $event = new Event([
             'event_name' => $request->get('event_name'),
             'event_location' => $request->get('event_location'),
             'event_description' => $request->get('event_description'),
-            //'event_image' => $request->event_image->storeAs('event_image', $fileName),
-            'event_image' => $request->get('event_description'),
+            'event_image' => $request->event_image->storeAs('event_image', $fileName),
+            //'event_image' => $request->get('event_description'),
             'event_date' => $request->get('event_date')
         ]);
         $event->save();
@@ -124,15 +124,19 @@ class EventController extends Controller
             'event_name'=>'required',
             'event_location'=>'required',
             'event_description'=>'required',
-            'event_image'=>'required',
+            'event_image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:6144',
+            //'event_image'=>'required',
             'event_date'=>'required'
         ]);
+
+        $fileName = "eventpic-" . time() . '.' . request()->event_image->getClientOriginalExtension();
 
         $event = Event::find($id);
         $event->event_name =  $request->get('event_name');
         $event->event_location = $request->get('event_location');
         $event->event_description = $request->get('event_description');
-        $event->event_image = $request->get('event_image');
+        //$event->event_image = $request->get('event_image')->storeAs('event_image', $fileName);
+        $event->event_image = $request->event_image->storeAs('event_image', $fileName);
         $event->event_date = $request->get('event_date');
         $event->save();
 

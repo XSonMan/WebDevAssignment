@@ -15,7 +15,7 @@
                     </div><br />
                 @endif
                 <a style="margin: 19px;" href="{{ route('donate.index')}}" class="btn btn-primary">Home</a>
-                <form role="form" id="donateform" method="post" action="{{ route('donate.store') }}">
+                <form role="form" enctype="multipart/form-data" id="donateform" method="post" action="{{ route('donate.store') }}">
                     @csrf
                     <div class="form-group">
                         <label for="event_name">Your Name:</label>

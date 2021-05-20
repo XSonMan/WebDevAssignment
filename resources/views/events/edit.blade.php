@@ -15,7 +15,7 @@
                 <br />
             @endif
             <a style="margin: 19px;" href="{{ route('events.index')}}" class="btn btn-primary">Home</a>
-            <form method="post" action="{{ route('events.update', $event->id) }}">
+            <form method="post" enctype="multipart/form-data" action="{{ route('events.update', $event->id) }}">
                 @method('PATCH')
                 @csrf
                 <div class="form-group">
@@ -35,7 +35,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="event_image">Image:</label>
+                    <label for="event_image">Current Event Image:</label>
+                </div>
+
+                <div class="form-group">
+                    <img height="200" width="200" src="{{ asset("/storage/$event->event_image") }}"/>
                     <input type="file" class="form-control-file" name="event_image" id="event_image" aria-describedby="fileHelp" value={{ $event->event_image }} />
                 </div>
 

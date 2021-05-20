@@ -21,7 +21,7 @@
                     <tr>
                         <th scope="row">{{$donate->event_name}}</th>
                         <th scope="row">RM {{$donate->amount}}</th>
-                        <th scope="row">{{$donate->proof}}</th>
+                        <th><img height="200" width="200" src="{{ asset("/storage/$donate->proof") }}"/></th>
                         <th scope="row">{{$donate->created_at}}</th>
                     </tr>
                     @endif

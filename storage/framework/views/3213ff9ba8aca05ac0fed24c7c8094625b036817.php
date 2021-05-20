@@ -44,7 +44,7 @@
                         <td><?php echo e($event->event_name); ?></td>
                         <td><?php echo e($event->event_location); ?></td>
                         <td><?php echo e($event->event_description); ?></td>
-                        <td><?php echo e($event->event_image); ?></td>
+                        <td><img height="200" width="200" src="<?php echo e(asset("/storage/$event->event_image")); ?>"/></td>
                         <td><?php echo e($event->event_date); ?></td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
