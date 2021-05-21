@@ -1,4 +1,4 @@
-<?php $__env->startSection('main'); ?>
+<?php $__env->startSection('content'); ?>
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <h1 class="display-3">Update an Event</h1>
@@ -52,4 +52,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\XSonM\gitapps\laravel\GProject\resources\views/events/edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\XSonM\gitapps\laravel\GProject\resources\views/events/edit.blade.php ENDPATH**/ ?>

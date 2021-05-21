@@ -1,19 +1,27 @@
-@extends('base')
+@extends('layouts.app')
 
-@section('main')
+
+@section('content')
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
-            <h1 class="display-3">Donations List</h1>
-            <a style="margin: 19px;" href="{{ route('admin.home')}}" class="btn btn-primary">Home</a>
+            <h3 style="font-family:'Britannic Bold';text-align: center;" class="display-3">Donations List</h3>
+            <a style="margin: 4px 2px;padding: 10px 20px;background-color: #1b1e21;border:darkred" href="{{ route('admin.home')}}" class="btn btn-primary">Home</a>
+            <p>
+
+            </p>
+            <p>
+
+            </p>
+
             <table class="table">
-                <thead class="thead-dark">
+                <thead class="thead-light">
                 <tr>
-                    <th scope="col">Paid By</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Event Name</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Proof</th>
-                    <th scope="col">Paid At</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Paid By</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Email</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Event Name</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Amount</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Proof</th>
+                    <th style="font-family: 'Arial Black'" scope="col">Paid At</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,4 +39,14 @@
             </table>
         </div>
     </div>
+
+    <div>
+        <div style="text-align: center;">
+            <p>
+
+            <h6>© 2021 Canadian Olympic Committee. All Rights Reserved.</h6>
+            </p>
+        </div>
+    </div>
 @endsection
+

@@ -9,7 +9,7 @@
                     </div>
                 <?php endif; ?>
                 <div class="card">
-                    <div class="card-header"><?php echo e(__('Dashboard')); ?></div>
+                    <div class="card-header">Registered Users waiting for approval</div>
 
                     <div class="card-body">
                         <?php if(session('status')): ?>
@@ -18,40 +18,46 @@
 
                             </div>
                         <?php endif; ?>
-                            <a style="margin: 19px;" href="<?php echo e(route('admin.home')); ?>" class="btn btn-primary">Home</a>
-
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Email</td>
-                                    <td>Status</td>
-                                    <td>Action</td>
-                                </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Status</td>
+                                <td>Action</td>
+                            </tr>
                             </thead>
                             <tbody>
-                                <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <tr>
-                                        <?php if($user->status == 0): ?>
-                                            <th><?php echo e($user->name); ?></th>
-                                            <th><?php echo e($user->email); ?></th>
-                                            <th>Inactive</th>
-                                            <th><a href="<?php echo e(route('status', ['id'=>$user->id])); ?>">Activate</a></th>
-                                        <!--<th><a href="<?php echo e(route('status', ['id'=>$user->id])); ?>">
+                            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr>
+                                    <?php if($user->status == 0): ?>
+                                        <th><?php echo e($user->name); ?></th>
+                                        <th><?php echo e($user->email); ?></th>
+                                        <th>Inactive</th>
+                                        <th><a href="<?php echo e(route('status', ['id'=>$user->id])); ?>">Activate</a></th>
+                                    <!--<th><a href="<?php echo e(route('status', ['id'=>$user->id])); ?>">
                                                 <?php if($user->status == 0): ?>
-                                            Activate
+                                        Activate
 <?php else: ?>
-                                            Deactivate
+                                        Deactivate
 <?php endif; ?>
-                                            </a></th>-->
-                                        <?php endif; ?>
-                                    </tr>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </a></th>-->
+                                    <?php endif; ?>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div>
+        <div style="text-align: center;">
+            <p>
+
+            <h6>© 2021 Canadian Olympic Committee. All Rights Reserved.</h6>
+            </p>
         </div>
     </div>
 <?php $__env->stopSection(); ?>

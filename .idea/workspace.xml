@@ -1,23 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Donations-related functions">
+    <list default="true" id="f8233114-ff73-4819-a87f-e4912357405f" name="Default Changelist" comment="Fixed Image related issues">
+      <change afterPath="$PROJECT_DIR$/public/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/G1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/flag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/hoc1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icehockey.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mains.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/olympic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tokyo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/landing.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/landing2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/base.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DonationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DonationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/RegRequest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/RegRequest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminDList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminDList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adminHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminHome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/donate/donate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/donate/donate.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/donate/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/donate/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/events/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lists/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lists/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1247b9a3563585b0b1eedb34cbd6e607396b837f.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1247b9a3563585b0b1eedb34cbd6e607396b837f.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1592a8261baabd62136daa557a789c3893e767cc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/16bf92109f52001bf1103ab698dd0ded6f730fe4.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/16bf92109f52001bf1103ab698dd0ded6f730fe4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3213ff9ba8aca05ac0fed24c7c8094625b036817.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/631ef8c250abe3ab07e1337cafb1425efb8154ab.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/631ef8c250abe3ab07e1337cafb1425efb8154ab.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/690caee33b6bc7bc539950f6c27f7708091e31f5.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/690caee33b6bc7bc539950f6c27f7708091e31f5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6c05663b4902d4a1c9e3f8f66c782b2480b250a3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6c05663b4902d4a1c9e3f8f66c782b2480b250a3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/dbb06ff0972074ca5dd0b8c799b9598cee7c3939.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/dbb06ff0972074ca5dd0b8c799b9598cee7c3939.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/f748a16008fa1a4b00bbcc40ed9fca6aeb0c1287.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f748a16008fa1a4b00bbcc40ed9fca6aeb0c1287.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/fa5ea67da384a48eb0be5fbab6bd9d5a57d9abfe.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/fa5ea67da384a48eb0be5fbab6bd9d5a57d9abfe.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +234,10 @@
       <workItem from="1621122060304" duration="15995000" />
       <workItem from="1621199921272" duration="32970000" />
       <workItem from="1621348917703" duration="11216000" />
-      <workItem from="1621368622200" duration="30214000" />
+      <workItem from="1621368622200" duration="37539000" />
+      <workItem from="1621550694733" duration="18000" />
+      <workItem from="1621551577865" duration="657000" />
+      <workItem from="1621552478648" duration="13712000" />
     </task>
     <task id="LOCAL-00001" summary="Missing files not added during First Commit">
       <created>1621367535376</created>
@@ -232,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621471433251</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed Image related issues">
+      <created>1621486771480</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621486771480</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +297,7 @@
     <MESSAGE value="Missing files not added during First Commit" />
     <MESSAGE value="Prevent duplicate entry" />
     <MESSAGE value="Donations-related functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Donations-related functions" />
+    <MESSAGE value="Fixed Image related issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Image related issues" />
   </component>
 </project>

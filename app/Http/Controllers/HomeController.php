@@ -36,6 +36,16 @@ class HomeController extends Controller
         return view('adminHome');
     }
 
+    public function lpage()
+    {
+        return view('landing');
+    }
+
+    public function lpage2()
+    {
+        return view('landing2');
+    }
+
     public function admindonatelist(){
         $donates = DB::table('gproject.donations')->select('user_id','name','email','event_name','amount','proof','gproject.donations.created_at')
             ->join('gproject.events','donations.event_id','=','events.id')->get();

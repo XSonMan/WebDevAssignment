@@ -10,7 +10,7 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">Registered Users waiting for approval</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -18,40 +18,46 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                            <a style="margin: 19px;" href="{{ route('admin.home')}}" class="btn btn-primary">Home</a>
-
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Email</td>
-                                    <td>Status</td>
-                                    <td>Action</td>
-                                </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Status</td>
+                                <td>Action</td>
+                            </tr>
                             </thead>
                             <tbody>
-                                @foreach($users as $user)
-                                    <tr>
-                                        @if($user->status == 0)
-                                            <th>{{ $user->name }}</th>
-                                            <th>{{ $user->email }}</th>
-                                            <th>Inactive</th>
-                                            <th><a href="{{route('status', ['id'=>$user->id]) }}">Activate</a></th>
-                                        <!--<th><a href="{{route('status', ['id'=>$user->id]) }}">
+                            @foreach($users as $user)
+                                <tr>
+                                    @if($user->status == 0)
+                                        <th>{{ $user->name }}</th>
+                                        <th>{{ $user->email }}</th>
+                                        <th>Inactive</th>
+                                        <th><a href="{{route('status', ['id'=>$user->id]) }}">Activate</a></th>
+                                    <!--<th><a href="{{route('status', ['id'=>$user->id]) }}">
                                                 @if($user->status == 0)
-                                            Activate
+                                        Activate
 @else
-                                            Deactivate
+                                        Deactivate
 @endif
-                                            </a></th>-->
-                                        @endif
-                                    </tr>
-                                @endforeach
+                                        </a></th>-->
+                                    @endif
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div>
+        <div style="text-align: center;">
+            <p>
+
+            <h6>© 2021 Canadian Olympic Committee. All Rights Reserved.</h6>
+            </p>
         </div>
     </div>
 @endsection

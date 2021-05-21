@@ -35,48 +35,11 @@
                     </div>
                 </ul>
 
-                @if( Auth::user()->is_admin == 1)
-                    <a  href="{{ route('admin.home')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Home
-                        </div>
-                    </a>
-                    <a style="color:black" href="{{ route('regrequest')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Register Requests
-                        </div>
-                    </a>
-
-                    <a style="color:black" href="{{ route('events.index')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Event Management
-                        </div>
-                    </a>
-
-                    <a style="color:black" href="{{ route('admin.dlist')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Donate list (all)
-                        </div>
-                    </a>
-
-            @else
-                    <a  href="{{ route('home')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Home
-                        </div>
-                    </a>
-                    <a style="color:black" href="{{ route('list')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Event List
-                        </div>
-                    </a>
-                    <a style="color:black" href="{{ route('donate.index')}}">
-                        <div style="color:white" class="navbar-brand">
-                            Donate to an event
-                        </div>
-                    </a>
-
-            @endif
+                <a href="{{ url('login') }}">
+                    <div style="color:white" class="navbar-brand">
+                        {{ config('app.name', 'Laravel') }}
+                    </div>
+                </a>
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->

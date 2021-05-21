@@ -62,7 +62,7 @@ class EventListController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        $participants = Participate::select('email')->where('event_id',$id)->get();
+        $participants = Participate::select('name')->where('event_id',$id)->get();
         return view('lists.view', compact('event','participants'));
     }
 

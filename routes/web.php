@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Auth::routes();
@@ -48,6 +48,9 @@ Route::group(['middleware' => 'role:user'], function() {
     Route::resource('user/donate','App\Http\Controllers\DonationController');
 
 });
+
+Route::get('/lpage', [App\Http\Controllers\HomeController::class, 'lpage'])->name('lpage');
+Route::get('/lpage2', [App\Http\Controllers\HomeController::class, 'lpage2'])->name('lpage2');
 
 Route::get('/list', [App\Http\Controllers\HomeController::class, 'eventList'])->name('list');
 

@@ -241,6 +241,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+    text-align:center;
 }
 
 button,
@@ -248,9 +249,19 @@ input {
   overflow: visible;
 }
 
-button,
-select {
+button{
   text-transform: none;
+}
+
+select{
+    text-transform: none;
+    width: 150px;
+    height: 36px;
+    margin: 10px;
+}
+select:focus {
+    min-width: 150px;
+    width: auto;
 }
 
 [role=button] {
@@ -3976,10 +3987,17 @@ input[type=button].btn-block {
   display: inline-block;
   padding-top: 0.32rem;
   padding-bottom: 0.32rem;
-  margin-right: 1rem;
-  font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
+    margin-top:4px;
+    margin-bottom:4px;
+    margin-left:20px;
+    margin-right:20px;
+    text-align:center;
+    font-size:24px;
+    height:49px;
+    float:right;
+    font-family:cursive;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -10001,4 +10019,32 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+.crt-but{
+    margin: 4px 2px;
+    padding: 13px 36px;
+    background-color: #1b1e21;
+    border:darkred;
+    color:#fff;
+    font-family:cursive;
+    font-size:20px;
+    border-radius:30px;
+    transition: 1s;
+}
+.crt-but:hover{
+    background-color:dimgrey;
+    color:#fff;
+    text-decoration:none;
+}
+.crt-butdiv{
+    text-align:center;
+    padding: 20px 0px 30px 0px;
+}
+.eh1{
+    font-family:cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+.et1{
+    font-size:20px;
 }

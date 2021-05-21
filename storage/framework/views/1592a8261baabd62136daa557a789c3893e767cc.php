@@ -11,21 +11,25 @@
                 <?php endif; ?>
             </div>
 
-            <h1 class="display-3">Events</h1>
-            <div>
-                <a style="margin: 19px;" href="<?php echo e(route('events.create')); ?>" class="btn btn-primary">Create Event</a>
-                <a style="margin: 19px;" href="<?php echo e(route('admin.home')); ?>" class="btn btn-primary">Home</a>
+            <h3 style="font-family:'Britannic Bold';text-align: center;" class="display-3">Events</h3>
+            <div class="crt-butdiv" >
+                <a class="crt-but" href="<?php echo e(route('events.create')); ?>" class="btn btn-primary">Create Event</a>
             </div>
+            <p>
 
+            </p>
+            <p>
+
+            </p>
             <table class="table table-striped">
-                <thead>
+                <thead class="thead-light">
                 <tr>
-                    <td>Event Name</td>
-                    <td>Event Location</td>
-                    <td>Event Description</td>
-                    <td>Image</td>
-                    <td colspan = 2>Event Date</td>
-                    <td colspan = 2>Actions</td>
+                    <td style="font-family: 'Arial Black'">Event Name</td>
+                    <td style="font-family: 'Arial Black'">Event Location</td>
+                    <td style="font-family: 'Arial Black'">Event Description</td>
+                    <td style="font-family: 'Arial Black'">Image</td>
+                    <td style="font-family: 'Arial Black'" colspan = 2>Event Date</td>
+                    <td style="font-family: 'Arial Black'" colspan = 2>Actions</td>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,14 +38,15 @@
                         <td><?php echo e($event->event_name); ?></td>
                         <td><?php echo e($event->event_location); ?></td>
                         <td><?php echo e($event->event_description); ?></td>
-                        <!--<td><?php echo e($event->event_image); ?></td>-->
+                    <!--<td><?php echo e($event->event_image); ?></td>-->
                         <td><img height="200" width="200" src="<?php echo e(asset("/storage/$event->event_image")); ?>"/></td>
+                    <!--<td><img height="200" width="200" src=" <?php echo e(asset('/storage/'.$event->event_image)); ?>"/></td>-->
                         <td><?php echo e($event->event_date); ?></td>
                         <td>
                             <a href="<?php echo e(route('events.edit',$event->id)); ?>" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
-                            <a href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Participants</a>
+                            <a style="margin: 4px 2px;padding: 10px 20px;background-color: #1b1e21;border:darkred" href="<?php echo e(route('list.show', $event->id)); ?>" class="btn btn-primary">View Participants</a>
                         </td>
                         <td>
                             <form action="<?php echo e(route('events.destroy', $event->id)); ?>" method="post">
@@ -55,6 +60,14 @@
                 </tbody>
             </table>
             <div>
+            </div>
+            <div>
+                <div style="text-align: center;">
+                    <p>
+
+                    <h6>© 2021 Canadian Olympic Committee. All Rights Reserved.</h6>
+                    </p>
+                </div>
             </div>
 <?php $__env->stopSection(); ?>
 
